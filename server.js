@@ -36,6 +36,7 @@ if (process.env.NODE_ENV === "development") {
 // Cors middleware
 app.use(
   cors({
+    // origin: "*",
     origin: [`${process.env.WEBSITE1}`, `${process.env.WEBSITE2}`],
     credentials: true,
   })
