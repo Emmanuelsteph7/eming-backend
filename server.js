@@ -52,6 +52,10 @@ app.use(
   })
 );
 
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(function (req, res, next) {
   if (process.env.NODE_ENV === "production") {
     const reqType = req.headers["x-forwarded-proto"];
@@ -65,10 +69,6 @@ app.use(function (req, res, next) {
     next();
   }
 });
-
-// Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Routes
 app.use("/", require("./routes/index"));
