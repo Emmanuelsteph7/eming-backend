@@ -12,7 +12,8 @@ router.get(
   "/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
-    res.redirect("http://localhost:3000/dashboard");
+    // res.redirect(`${process.env.WEBSITE2}/dashboard`);
+    res.redirect(`${process.env.WEBSITE1}/dashboard`);
     // res.json({ message: "successful login" });
   }
 );

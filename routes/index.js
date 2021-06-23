@@ -21,8 +21,11 @@ router.get("/getStories", async (req, res) => {
   try {
     const stories = await Story.find({
       user: req.user.id,
-    }).populate("user");
+    })
+      .populate("user")
+      .sort({ createdAt: "desc" });
 
+    console.log(req.user.id);
     res.json(stories);
   } catch (error) {
     console.error(error);
