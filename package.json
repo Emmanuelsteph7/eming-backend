@@ -4,9 +4,9 @@
   "description": "Story App",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server",
+    "start": "node server.js",
     "heroku-prebuild": "npm install",
-    "dev": "cross-env NODE_ENV=development nodemon server"
+    "dev": "nodemon server.js"
   },
   "author": "Emmanuel Stephen",
   "license": "MIT",
