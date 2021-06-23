@@ -6,6 +6,7 @@ const Story = require("../models/Story");
 // Get user data
 // GET /getUser
 router.get("/getUser", (req, res) => {
+  console.log(req.user);
   res.json(req.user);
   // console.log(req.user);
   // console.log(req.session.passport.user);
