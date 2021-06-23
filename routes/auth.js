@@ -14,7 +14,7 @@ router.get(
   (req, res) => {
     // res.redirect(`${process.env.WEBSITE2}/dashboard`);
     res.redirect(`${process.env.WEBSITE1}/dashboard`);
-    console.log(req.user);
+    // console.log(req.user);
     // res.json({ message: "successful login" });
   }
 );
