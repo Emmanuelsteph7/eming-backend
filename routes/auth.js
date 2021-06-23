@@ -13,7 +13,7 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
     // res.redirect(`${process.env.WEBSITE2}/dashboard`);
-    res.redirect(`${process.env.WEBSITE1}/dashboard`);
+    res.redirect(`${process.env.WEBSITE2}/dashboard`);
     // console.log(req.user);
     // res.json({ message: "successful login" });
   }
