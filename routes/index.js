@@ -12,6 +12,10 @@ router.get("/getUser", (req, res) => {
   // console.log(req.session.passport.user);
 });
 
+router.get("/", (req, res) => {
+  console.log(req);
+});
+
 router.post("/getUser", (req, res) => {
   console.log(req.user);
 });
